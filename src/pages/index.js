@@ -11,7 +11,9 @@ import Footer from '../components/Footer';
 const IndexPage = () => {
   return (
     <>
-      <Layout></Layout>
+      <Layout>
+        <Hero showPerson />
+      </Layout>
     </>
   );
 };
