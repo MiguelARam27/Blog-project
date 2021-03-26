@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <Navbar toggleSideBar={toggleSideBar} />
       <Sidebar isOpen={open} toggleSideBar={toggleSideBar} />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
