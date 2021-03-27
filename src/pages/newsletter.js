@@ -26,7 +26,7 @@ const NewsLetter = () => {
             <input
               type="type"
               name="email"
-              placeholder="your name"
+              placeholder="your email"
               className="form-control"
             />
             <button type="submit" className="btn form-control">
