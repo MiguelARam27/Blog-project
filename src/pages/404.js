@@ -7,8 +7,10 @@ const NotFoundPage = () => (
     <section className="error-page">
       <div className="page-center">
         <span>404</span>
-        <h3>Sorry, not the page you tried cannot be found</h3>
-        <Link to="/" className="btn" />
+        <h3>Sorry, the page you tried cannot be found</h3>
+        <Link to="/" className="btn">
+          back home
+        </Link>
       </div>
     </section>
   </Layout>
