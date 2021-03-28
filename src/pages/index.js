@@ -13,6 +13,7 @@ const IndexPage = () => {
     <>
       <Layout>
         <Hero showPerson />
+        <Posts title="recent posts"></Posts>
       </Layout>
     </>
   );
