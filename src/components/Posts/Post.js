@@ -1,13 +1,35 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import { FaRegClock } from 'react-icons/fa'
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import Image from 'gatsby-image';
+import { FaRegClock } from 'react-icons/fa';
+import { IoMdArrowRoundForward } from 'react-icons/io';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Post = () => {
-  return <Wrapper>Post Component</Wrapper>
-}
+const Post = ({ id, title, slug, category, date, description, image }) => {
+  const img = getImage(image);
+
+  return (
+    <Wrapper>
+      <GatsbyImage image={img} alt="post-image" className="img" />
+      <div className="info">
+        <span className="category">{category}</span>
+        <h3>{title}</h3>
+        <div className="underline"></div>
+        <p>{description}</p>
+        <Link to={`/posts/${slug}`} className="link">
+          Continue Reading <IoMdArrowRoundForward />
+        </Link>
+        <footer>
+          <span className="date">
+            <FaRegClock className="icon"></FaRegClock>
+            {date}
+          </span>
+        </footer>
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.article`
   margin-bottom: 3rem;
@@ -109,6 +131,6 @@ const Wrapper = styled.article`
       }
     }
   }
-`
+`;
 
-export default Post
+export default Post;

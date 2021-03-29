@@ -19,7 +19,7 @@ const query = graphql`
 `;
 const About = () => {
   const data = useStaticQuery(query);
-  console.log(data);
+
   return (
     <Wrapper>
       <Title title="about me" />

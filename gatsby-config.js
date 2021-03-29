@@ -4,6 +4,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -46,5 +51,18 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        // apiURL: `http://localhost:1337`,
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        //   contentTypes : `jobs`, `projects`, `blogs`,
+        //   singleType : `about`
+        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+        contentTypes: [`blogs`],
+        singleTypes: [],
+      },
+    },
   ],
-}
+};

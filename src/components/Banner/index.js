@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <Wrapper>
       <About />
-      <Instagram />
+      {/* <Instagram /> */}
     </Wrapper>
   );
 };
